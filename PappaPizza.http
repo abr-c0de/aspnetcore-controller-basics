@@ -1,0 +1,39 @@
+@PappaPizza_HostAddress = https://localhost:7210
+
+
+
+GET {{PappaPizza_HostAddress}}/api/pizza
+
+###
+
+@id=2
+GET {{PappaPizza_HostAddress}}/api/pizza/{{id}}
+
+###
+
+POST {{PappaPizza_HostAddress}}/api/pizza
+Content-Type: application/json
+
+{
+  "name": "Hawaiian Pizza",
+  "isGlutenFree": false
+}
+
+###
+
+DELETE {{PappaPizza_HostAddress}}/api/pizza/{{id}}
+
+###
+
+
+
+PUT {{PappaPizza_HostAddress}}/api/pizza/{{id}}
+Content-Type: application/json
+
+{
+  "id": 2,
+  "name": "Mexican Pizza",
+  "isGlutenFree": false
+}
+
+###
